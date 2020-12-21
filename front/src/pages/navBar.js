@@ -23,13 +23,12 @@ const deconnection=()=>{
 
                 <div className="nav-bar container"> 
                     <ul>
-                        <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>
-                       
+                        <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
                     </ul>
                         <NavbarProduct/>
-                    <ul style={{paddingLeft:800,display:"flex"}}>
-                        <li><Link style={{textDecoration:"none",color:"black",paddingRight:20}} to="/Login">connection</Link></li>
-                        <li><Link to='/panier' style={{textDecoration:"none",color:"black",paddingRight:40}} to="/panier">panier</Link></li>
+                    <ul style={{display:"flex"}}>
+                        <li><Link style={{textDecoration:"none",color:"black"}} to="/Login">connection</Link></li>
+                        <li><Link to='/panier' style={{textDecoration:"none",color:"black"}} to="/panier">panier</Link></li>
                         {/* <li><i class="fa fa-facebook" style={{ fontSize: '24px' }}></i></li>
                         <li><i class="fa fa-twitter" style={{ fontSize: '24px' }}></i></li>
                         <li><i class="fa fa-instagram" style={{ fontSize: '24px' }}></i></li> */}
@@ -47,9 +46,9 @@ const deconnection=()=>{
                             <li><Link to="/">Home</Link></li>
                             
                         </ul>
-                        <ul style={{paddingLeft:800}}>
+                        <ul >
                             <li><Link style={{textDecoration:"none",color:"black"}} to="/" onClick={deconnection}>deconnection</Link></li>
-                            <li><Link to='/panier' style={{textDecoration:"none",color:"black",paddingRight:40}} to="/panier">panier</Link></li>
+                            <li><Link to='/panier' style={{textDecoration:"none",color:"black"}} to="/panier">panier</Link></li>
                            
                             {/* <li><i class="fa fa-facebook" style={{ fontSize: '24px' }}></i></li>
                             <li><i class="fa fa-twitter" style={{ fontSize: '24px' }}></i></li>
@@ -64,9 +63,9 @@ const deconnection=()=>{
                            
                         </ul>
                         <NavbarProduct/>
-                        <ul style={{paddingLeft:800}}>
+                        <ul >
                             <li><Link style={{textDecoration:"none",color:"black"}} onClick={deconnection} to="/">deconnection</Link></li>
-                            <li><Link to='/panier' style={{textDecoration:"none",color:"black",paddingRight:40}} to="/panier">panier</Link></li>
+                            <li><Link to='/panier' style={{textDecoration:"none",color:"black" }} to="/panier">panier</Link></li>
                             {/* <li><i class="fa fa-facebook" style={{ fontSize: '24px' }}></i></li>
                             <li><i class="fa fa-twitter" style={{ fontSize: '24px' }}></i></li>
                             <li><i class="fa fa-instagram" style={{ fontSize: '24px' }}></i></li> */}

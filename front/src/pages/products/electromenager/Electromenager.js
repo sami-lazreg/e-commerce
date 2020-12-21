@@ -3,6 +3,7 @@ import {useSelector} from 'react-redux'
 import OneProduct from '../../oneProduct';
 
 
+
 function Electromenager() {
 
 const state=useSelector(state=>state.getReducer)
