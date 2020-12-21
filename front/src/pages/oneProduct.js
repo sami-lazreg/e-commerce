@@ -3,6 +3,9 @@ import {Card,Button} from 'react-bootstrap'
 import {addPanier} from '../actions/addPanier'
 import {useDispatch,useSelector} from 'react-redux'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
+
+
 export default function OneProduct({state}) {
 
   const info=useSelector(state=>state.authReducer)
@@ -32,6 +35,7 @@ export default function OneProduct({state}) {
   <Card.Img variant="top" src={state.url} />
   <Card.Body>
     <Card.Title><p style={{fontSize:14}}>{state.name}</p></Card.Title>
+    
     <Card.Text>
       {`${state.price} TND`}
      
@@ -40,7 +44,7 @@ export default function OneProduct({state}) {
       Panier()
       information()
     }} >add</Button>
-    <Button variant="primary ml-5" >View details</Button>
+    <Link to={`/product/detail/${state._id}`}><Button variant="primary ml-5" >View details</Button></Link>
    
   </Card.Body>
       
