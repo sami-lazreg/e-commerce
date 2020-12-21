@@ -4,6 +4,7 @@ import OneProduct from '../../oneProduct';
 import Pagination from '../Pagination'
 
 
+
 function Electromenager() {
     const [currentPage,setCurrentPage]=useState(1)
     const [productPerPage,setProductPerPage]=useState(8)
