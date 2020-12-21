@@ -10,6 +10,7 @@ import adminPage from './pages/adminPage'
 import ProductRoute from './pages/products/productRoute'
 import panier from './pages/panier'
 import {useSelector} from 'react-redux'
+import viewDetails from './pages/ViewDetails'
 
 
 
@@ -20,6 +21,7 @@ function App() {
     <BrowserRouter>
       <NavBar/>
       <ProductRoute/>
+      <Route path="/product/detail/:id" component={viewDetails}/>
       
        <Route exact path="/" component={Home}/>
        <Route path="/Register"  render={props=>
