@@ -1,6 +1,7 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import {Card,Button} from 'react-bootstrap'
 import {addPanier} from '../actions/addPanier'
+import {getPanier} from '../actions/getPanier'
 import {useDispatch,useSelector} from 'react-redux'
 import {useState} from 'react'
 import {Link} from 'react-router-dom'
@@ -9,17 +10,21 @@ import {Link} from 'react-router-dom'
 export default function OneProduct({state}) {
 
   const info=useSelector(state=>state.authReducer)
-  
+ 
   const data={
     url:state.url,
     name:state.name,
     price:state.price,
     }
+
     
   const dispatch = useDispatch()
   const Panier=()=>{
     dispatch(addPanier(data))
+    
   }
+ 
+  
 
 
   const information=()=>{
@@ -40,12 +45,14 @@ export default function OneProduct({state}) {
       {`${state.price} TND`}
      
     </Card.Text>
+    <div>
     <Button variant="primary mr-3" onClick={()=>{
       Panier()
       information()
-    }} >add</Button>
-    <Link to={`/product/detail/${state._id}`}><Button variant="primary ml-5" >View details</Button></Link>
-   
+      
+    }} ><p style={{margin:0 ,fontSize:14}}>add</p></Button>
+    <Link to={`/product/detail/${state._id}`}><Button variant="primary ml-5" ><p style={{margin:0 ,fontSize:14}}>View details</p></Button></Link>
+    </div>
   </Card.Body>
       
 </Card>
