@@ -1,8 +1,9 @@
-import {useSelector} from 'react-redux'
+import {useSelector,useDispatch} from 'react-redux'
 import {useState} from 'react'
 import OneProduct from '../../oneProduct';
 import Pagination from '../Pagination'
-
+import {useEffect} from 'react'
+import {getAction} from "../../../actions/getAction"
 
 
 function Electromenager() {
@@ -16,7 +17,10 @@ const change=(num)=>{
 }
 
 const state=useSelector(state=>state.getReducer)
-
+const dispatch=useDispatch();       
+useEffect(()=>{
+    dispatch(getAction())
+},[]);
 
 let electro= state.filter(el=>(el.category== "électroménager"))
 const totalProduct =electro.length
