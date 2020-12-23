@@ -26,15 +26,7 @@ const deconnection=()=>{
     
     const Panier =useSelector(state=>state.getPanier).length
     
-    const [navBar,setNavBar]=useState(false)
-    const changeBackground=()=>{
-        if(window.scrollY>=80){
-            setNavBar(true)
-        }else{
-            setNavBar(false)
-        }
-    }
-    window.addEventListener('scroll',changeBackground)
+    
    
         
 
@@ -43,7 +35,7 @@ const deconnection=()=>{
         <div >
             {!auth.role ?
 
-                <div className={navBar? "nav-bar active":"nav-bar"} > 
+                <div className={"nav-bar"} > 
                     <ul style={{display:"flex", alignItems:"center"}} >
                         <li><i className="fas fa-dice" style={{fontSize:50}}></i>
                         <br/>

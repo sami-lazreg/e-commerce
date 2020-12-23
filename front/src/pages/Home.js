@@ -14,7 +14,7 @@ import News from './News'
 const Home = () => {
    
     return (
-      <div style={{height:"100vh"}}>
+      <div style={{marginTop:"110px"}}>
        <CarouselPage />
       <div className='offres'>
         <h1>NOS OFFRES</h1>
@@ -25,6 +25,7 @@ const Home = () => {
           </div>
           <div className=' col-sm-6 col-md-4 my-2'>
             <img src={pc} className=' img-thumbnail image'  />
+    
           </div>
           <div className=' col-sm-6 col-md-4 my-2'>
             <img src={phone}  className=' img-thumbnail image'  />
