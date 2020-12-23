@@ -11,15 +11,23 @@ import ProductRoute from './pages/products/productRoute'
 import panier from './pages/panier'
 import {useSelector} from 'react-redux'
 import viewDetails from './pages/ViewDetails'
+import Filter from './pages/Filter'
+import {useState} from 'react'
+
 
 
 
 function App() {
   const auth=useSelector(state=>state.authReducer)
+   const [search, setSearch] = useState('')
+   console.log(search)
+   const handel=(e)=>{
+setSearch(e.target.value)
+   }
   return (
     <div>
     <BrowserRouter>
-      <NavBar/>
+      <NavBar handel={handel}/>
       <ProductRoute/>
       <Route path="/product/detail/:id" component={viewDetails}/>
       
@@ -30,6 +38,7 @@ function App() {
                     !auth.role? <Login {...props}/>:<Redirect to='/'/>}/>
        <PrivateRoute path="/adminPage" component={adminPage}/>
        <PrivateRoute2 path="/panier" component={panier}/>
+       <Route path="/filter" render={props=><Filter {...props} search={search}/> }/>
        </BrowserRouter>
        </div>
     

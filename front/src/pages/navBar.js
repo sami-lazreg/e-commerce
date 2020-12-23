@@ -1,13 +1,21 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import { Link } from 'react-router-dom'
 import { useSelector,useDispatch } from 'react-redux'
 import NavbarProduct from './products/navBarProduct'
 import {useLocation} from 'react-router-dom'
 import { DECONECT } from '../actions/types'
+import SearchNavBar from "./SearchNavBar"
+import {getPanier} from '../actions/getPanier'
 
 
-const NavBar = () => {
+
+const NavBar = ({ handel}) => {
+    const add =useSelector(state=>state.addPanier)
+    const auth = useSelector(state => state.authReducer)
 const dispatch=useDispatch()
+useEffect(()=>{
+    dispatch(getPanier())
+},[add,auth]);
 const deconnection=()=>{
     localStorage.removeItem('token')
     localStorage.removeItem('role')
@@ -15,60 +23,91 @@ const deconnection=()=>{
 }
     const location=useLocation()
     console.log(location)
-    const auth = useSelector(state => state.authReducer)
+    
+    const Panier =useSelector(state=>state.getPanier).length
+    
+    const [navBar,setNavBar]=useState(false)
+    const changeBackground=()=>{
+        if(window.scrollY>=80){
+            setNavBar(true)
+        }else{
+            setNavBar(false)
+        }
+    }
+    window.addEventListener('scroll',changeBackground)
+   
+        
+
     return (
 
         <div >
             {!auth.role ?
 
-                <div className="nav-bar container"> 
-                    <ul>
+                <div className={navBar? "nav-bar active":"nav-bar"} > 
+                    <ul style={{display:"flex", alignItems:"center"}} >
+                        <li><i className="fas fa-dice" style={{fontSize:50}}></i>
+                        <br/>
+                        <label>MyHouse</label>
+                        </li>
+                        
                         <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
+                        <li><NavbarProduct/></li>
+                        <li><SearchNavBar  handel={ handel}/></li>
                     </ul>
-                        <NavbarProduct/>
-                    <ul style={{display:"flex"}}>
-                        <li><Link style={{textDecoration:"none",color:"black"}} to="/Login">connection</Link></li>
-                        <li><Link to='/panier' style={{textDecoration:"none",color:"black"}} to="/panier">panier</Link></li>
-                        {/* <li><i class="fa fa-facebook" style={{ fontSize: '24px' }}></i></li>
-                        <li><i class="fa fa-twitter" style={{ fontSize: '24px' }}></i></li>
-                        <li><i class="fa fa-instagram" style={{ fontSize: '24px' }}></i></li> */}
+                        
+                    <ul style={{display:"flex" ,alignItems:"center"}}>
+                        <li><Link style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/Login">connection</Link></li>
+                        <li><Link to='/panier' style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/panier"><i class="fas fa-shopping-cart" style={{fontSize:30}}>0</i></Link></li>
+                        
+                        
                     </ul>
 
                 </div>
                 :
                 auth.role == "admin" ?
-                    <div className="nav-bar">
-                        <ul>
-                            <li> <Link style={{textDecoration:"none",color:"black"}} to="/adminPage">add product</Link></li>
-                        </ul>
-                        <NavbarProduct/>
-                        <ul>
-                            <li><Link to="/">Home</Link></li>
-                            
-                        </ul>
-                        <ul >
-                            <li><Link style={{textDecoration:"none",color:"black"}} to="/" onClick={deconnection}>deconnection</Link></li>
-                            <li><Link to='/panier' style={{textDecoration:"none",color:"black"}} to="/panier">panier</Link></li>
-                           
-                            {/* <li><i class="fa fa-facebook" style={{ fontSize: '24px' }}></i></li>
-                            <li><i class="fa fa-twitter" style={{ fontSize: '24px' }}></i></li>
-                            <li><i class="fa fa-instagram" style={{ fontSize: '24px' }}></i></li> */}
-                        </ul>
+                <div className="nav-bar "> 
+                <ul style={{display:"flex", alignItems:"center"}} >
+                    <li><i className="fas fa-dice" style={{fontSize:50}}></i>
+                    <br/>
+                    <label>MyHouse</label>
+                    </li>
+                    
+                    <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
+                    <li><NavbarProduct/></li>
+                    <li><SearchNavBar handel={handel}/></li>
+                </ul>
+                    
+                <ul style={{display:"flex" ,alignItems:"center"}}>
+                <li><Link style={{textDecoration:"none",color:"black", marginLeft:"10px"}} onClick={deconnection} to="/">deconnection</Link></li>
+                    <li><Link to='/panier' style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/panier"><i class="fas fa-shopping-cart" style={{fontSize:30}}>{Panier}</i></Link></li>
+                    <li> <Link style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/adminPage"><i class="fas fa-plus-circle" style={{fontSize:30}}></i></Link></li>
+                    
+                </ul>
 
-                    </div>
+            </div>
                     :
-                    <div className="nav-bar">
-                        <ul>
-                            <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>
-                           
-                        </ul>
-                        <NavbarProduct/>
-                        <ul >
-                            <li><Link style={{textDecoration:"none",color:"black"}} onClick={deconnection} to="/">deconnection</Link></li>
-                            <li><Link to='/panier' style={{textDecoration:"none",color:"black" }} to="/panier">panier</Link></li>
-                
-                        </ul>
-                    </div>
+
+                    <div className="nav-bar "> 
+                <ul style={{display:"flex", alignItems:"center"}} >
+                    <li><i className="fas fa-dice" style={{fontSize:50}}></i>
+                    <br/>
+                    <label>MyHouse</label>
+                    </li>
+                    
+                    <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
+                    <li><NavbarProduct/></li>
+                    <li><SearchNavBar  handel={ handel}/></li>
+                </ul>
+                    
+                <ul style={{display:"flex" ,alignItems:"center"}}>
+                <li><Link style={{textDecoration:"none",color:"black", marginLeft:"10px"}} onClick={deconnection} to="/">deconnection</Link></li>
+                    <li><Link to='/panier' style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/panier"><i class="fas fa-shopping-cart" style={{fontSize:30}}>{Panier}</i></Link></li>
+                    
+                    
+                </ul>
+
+            </div>
+
 
             }
 

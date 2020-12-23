@@ -16,7 +16,7 @@ function Machine() {
 const change=(num)=>{
     setCurrentPage(num)
 }
-const state=useSelector(state=>state.getReducer)
+
 const dispatch=useDispatch();       
 useEffect(()=>{
     dispatch(getAction())
