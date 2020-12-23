@@ -25,6 +25,7 @@ const Home = () => {
           </div>
           <div className=' col-sm-6 col-md-4 my-2'>
             <img src={pc} className=' img-thumbnail image'  />
+    
           </div>
           <div className=' col-sm-6 col-md-4 my-2'>
             <img src={phone}  className=' img-thumbnail image'  />
