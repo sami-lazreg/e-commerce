@@ -14,7 +14,7 @@ import News from './News'
 const Home = () => {
    
     return (
-      <div style={{height:3000}}>
+      <div style={{height:"100vh"}}>
        <CarouselPage />
       <div className='offres'>
         <h1>NOS OFFRES</h1>
@@ -52,6 +52,77 @@ const Home = () => {
       </div>
       <CarouselLogo/>
       <News/>
+      <div className='container Livraisons mt-5'>
+      <div className='row'>
+         <div className='col-sm-6 col-md-4 '>
+           <div className='contenu '>
+            <div className='cercle m-5'>
+              <i class="fa fa-ambulance" aria-hidden='true'/>
+            </div>
+            <div class='text'>
+              <h4 className='domicile'>Livraison à domicile</h4>
+              <p>Votre commande livrée chez vous </p>
+            </div>
+           </div>
+         </div>
+         <div className='col-sm-6 col-md-4 '>
+         <div className='contenu '>
+            <div className='cercle m-5'>
+              <i class="fa fa-volume-control-phone" aria-hidden='true'/>
+            </div>
+            <div class='text'>
+              <h4 className='domicile'>Service client</h4>
+              <p>Nous sommes disponibles pour répondre à vos questions </p>
+            </div>
+           </div>
+        </div>
+         <div className='col-sm-6 col-md-4 '>
+         <div className='contenu '>
+            <div className='cercle m-5'>
+              <i class="fa fa-clock-o" aria-hidden='true'/>
+            </div>
+            <div class='text'>
+              <h4 className='domicile'>Horaire</h4>
+              <p>Ouvert du lundi au samedi de 8h00 à 19h30</p>
+            </div>
+           </div>
+        </div>
+      </div>
+      </div>
+      <div className='contact mt-5'>
+      <div className='container'>
+        <div className='row'>
+        <div className='col-sm-6 col-md-4 '>
+           <div className='logo'>
+             <p>LOGO </p>
+           </div>
+        </div>
+        <div className='col-sm-6 col-md-4 '>
+           <div className='logo'>
+             <p style={{fontWeight:500,fontSize:18}}>zouhour@gmail.com</p>
+             <p style={{fontWeight:500,fontSize:18}}>(+216)5555555</p>
+           </div>
+        </div>
+        <div className='col-sm-6 col-md-4 '>
+        <div className='logo'>
+          <ul className='social'>
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-twitter" ></i></li>
+          <li><i class="fab fa-instagram"></i></li> 
+          <li><i class="fab fa-youtube" ></i></li> 
+          </ul>
+        </div>
+        </div>
+        </div>
+        </div>
+        <div className='copie '>
+          <div class='container right'>
+          <p class="_blank" href="#" target="_blank">
+                    © 2020 - nom de la magazine
+          </p>
+          </div>
+        </div>
+      </div>
       </div>
     )
 }
