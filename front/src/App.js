@@ -25,7 +25,7 @@ function App() {
 setSearch(e.target.value)
    }
   return (
-    <div>
+    <div className="app">
     <BrowserRouter>
       <NavBar handel={handel}/>
       <ProductRoute/>

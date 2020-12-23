@@ -34,9 +34,7 @@ body{
     
 }
 
-.nav-bar.active{
-  box-shadow: 15px 2px 12px 0px black;
-}
+
 .menu{
   display: flex;
   justify-content: space-around;
@@ -233,4 +231,8 @@ li{
 .form-control:hover{
   outline:none ;
   box-shadow:none;
+}
+.app{
+  --tw-bg-opacity: 1;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity));
 }
