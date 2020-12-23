@@ -66,9 +66,7 @@ const deconnection=()=>{
                         <ul >
                             <li><Link style={{textDecoration:"none",color:"black"}} onClick={deconnection} to="/">deconnection</Link></li>
                             <li><Link to='/panier' style={{textDecoration:"none",color:"black" }} to="/panier">panier</Link></li>
-                            {/* <li><i class="fa fa-facebook" style={{ fontSize: '24px' }}></i></li>
-                            <li><i class="fa fa-twitter" style={{ fontSize: '24px' }}></i></li>
-                            <li><i class="fa fa-instagram" style={{ fontSize: '24px' }}></i></li> */}
+                
                         </ul>
                     </div>
 

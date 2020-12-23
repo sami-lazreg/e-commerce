@@ -1,4 +1,4 @@
-/*register*/
+
 .register{
   margin-top:100px;
   background-color:rgba(220,220,220,0.2)
@@ -73,14 +73,133 @@ li{
     color: #000;
 }
 .news{
-  display:flex
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
 }
 .newcard{
-  width:33.33%;
-  border:1px solid black;
+  width:25%;
+  border:3px solid white;
+  box-shadow:11px 0px 9px 3px rgba(220,220,220,0.2);
   box-sizing: border-box;
   margin: 10px;
 }
+@media screen and (max-width: 992px) {
+  .newcard{
+    width:40%
+  }
+}
+@media screen and (max-width: 800px) {
+  .newcard{
+    width:60%
+  }
+}
+.newcard:hover{
+  border:4px solid rgba(220,220,220,0.3)
+}
 .positionner{
   text-align:center
+}
+ .btn-product-list {
+  padding: 0.5rem 1rem !important;
+  background-color: #c9ac45 !important;
+  color:#fff !important;
+  border: solid 1px #c8c8c8 !important;
+ }
+ .btn-product-list:hover{
+   cursor:pointer;
+   color:black!important;
+   background-color:white!important;
+   border:1px solid violet!important
+
+ }
+ .cercle{
+  border-radius: 50%;
+  background: #e8cfb1;
+  padding: 50px;
+  width: 150px;
+  height:150px
+ }
+ .fa-ambulance,.fa-clock-o{
+   font-size:42px;
+   font-weight:bolder;
+   padding:0px;
+   text-align:center
+ }
+ .fa-volume-control-phone{
+   font-size:50px;
+   padding-left:10px;
+ }
+ .fa-volume-control-phone:hover{
+   color:#c9ac45; 
+   cursor:pointer;
+ }
+ .fa-ambulance:hover{
+  color:#c9ac45; 
+  cursor:pointer;
+ }
+ .fa-clock-o:hover{
+  color:#c9ac45; 
+  cursor:pointer;
+ }
+.contenu{
+  text-align:center;
+  margin:25px;
+  max-width:250px;
+}
+.domicile:hover{
+  color:#c9ac45;
+  cursor:pointer;
+}
+.contact{
+  background-color:#282828 !important;
+  color:white;
+}
+.logo{
+  padding:20px;
+}
+.logo ul{
+  display:flex;
+}
+.logo ul li{
+  margin:10px
+}
+.logo ul li i {
+  font-size:35px;
+  color:white
+}
+.logo ul li i:hover {
+  color:yellow;
+  cursor:pointer
+}
+.copie{
+  border-top:1px solid #dcdcdc;
+}
+.copie .right{
+  text-align:center;
+  padding:10px;
+}
+.copie p{
+  font-size:14px;
+  text-align:center;
+  color:white;
+
+}
+.input-group{
+  width:350px !important;
+  background-color:white !important;
+  position:relative !important;
+  left:70%!important;
+  border:solid 1px #c9ac45;
+}
+.search-btn{
+  background-color:white;
+  border:1px solid white;
+}
+.form-control{
+  border:none !important;
+}
+.form-control:hover{
+  outline:none ;
+  box-shadow:none;
 }
