@@ -10,7 +10,7 @@ import tv from '../tv.jpg'
 import recepteur from '../recepteur.jpg'
 import CarouselPage from './CarousalPage'
 import CarouselLogo from './CarouselLogo'
-import News from './News'
+import Nouveautes from './nouveautes'
 const Home = () => {
    
     return (
@@ -52,7 +52,7 @@ const Home = () => {
         </div>
       </div>
       <CarouselLogo/>
-      <News/>
+      <Nouveautes/>
       <div className='container Livraisons mt-5'>
       <div className='row'>
          <div className='col-sm-6 col-md-4 '>
