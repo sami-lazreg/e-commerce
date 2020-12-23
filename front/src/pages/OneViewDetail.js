@@ -5,8 +5,9 @@ import {addPanier} from '../actions/addPanier'
 
 
 
-const OneViewDetail = ({el}) => {
+const OneViewDetail = ({el,goBack}) => {
     const dispatch = useDispatch() 
+    
     
     const info=localStorage.getItem('token')
     const data={
@@ -27,6 +28,7 @@ const OneViewDetail = ({el}) => {
     }
     
   }
+  
 
     return (
         <div style={{display:"flex",margin:"169px 334px 0 256px"}} >
@@ -38,6 +40,9 @@ const OneViewDetail = ({el}) => {
           Panier()
           information()
         }}>Add</Button>
+        <Button onClick={()=>{
+           goBack()
+        }}>back</Button>
         </div>
         </div>
     )

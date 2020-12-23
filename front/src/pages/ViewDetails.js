@@ -6,7 +6,7 @@ import OneViewDetail from './OneViewDetail'
 const ViewDetails = (state) => {
     const product = useSelector((state) => state.getReducer).filter(
         (el) => el._id == state.match.params.id);
-
+        
     const dispatch = useDispatch()  
     useEffect(()=>{
         dispatch(getAction())
@@ -14,7 +14,7 @@ const ViewDetails = (state) => {
 
     
   return (
-   <div>{product.map(el=><OneViewDetail el={el}/>)}</div>
+   <div>{product.map(el=><OneViewDetail el={el} goBack={state.history.goBack}/>)}</div>
   );
 };
 
