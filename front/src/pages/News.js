@@ -33,6 +33,7 @@ export default function News({state}){
         <>
 <div className='newcard'>
   <div className="positionner">
+
   <img src={state.url} height='200'/>
   <p>{state.name}</p>
   <button onClick={()=>{
@@ -42,6 +43,7 @@ export default function News({state}){
     }} className='mb-2'>Ajouter Au panier</button>
   </div>
 </div>
+
         </>
     )
 }
