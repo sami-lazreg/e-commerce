@@ -16,8 +16,8 @@ useEffect(()=>{
     return (
         <div>
             <div className='container  mt-5'>
-            <h1>Actualités</h1>
-            <div className='news mt-5'>
+            <h2>NOUVEAUTES</h2>
+            <div className='news '>
             {phone.map((el)=><News state={el}/>)}
             </div>
             </div>

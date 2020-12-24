@@ -17,36 +17,36 @@ const Home = () => {
       <div style={{marginTop:"110px"}}>
        <CarouselPage />
       <div className='offres'>
-        <h1>NOS OFFRES</h1>
         <div className='container mt-5'>
+        <h2>NOS OFFRES</h2>
         <div className='row text-center' >
-          <div className='col-sm-6 col-md-4 my-2'>
+          <div className='col-sm-6 col-md-4 my-2 translate '>
             <img src={electro} className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate '>
             <img src={pc} className=' img-thumbnail image'  />
     
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate'>
             <img src={phone}  className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate'>
             <img src={tablette}  className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate'>
             <img src={accessoires}  className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate'>
             <img src={photocopier}  className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate'>
             <img src={homecinema}  className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 my-2'>
+          <div className=' col-sm-6 col-md-4 my-2 translate'>
             <img src={recepteur}  className=' img-thumbnail image'  />
           </div>
-          <div className=' col-sm-6 col-md-4 '>
-            <img src={tv}  className=' img-thumbnail image'  />
+          <div className=' col-sm-6 col-md-4  my-2 translate'>
+            <img src={tv}  className=' img-thumbnail image '  />
           </div>
         </div>
         </div>
@@ -95,13 +95,15 @@ const Home = () => {
         <div className='row'>
         <div className='col-sm-6 col-md-4 '>
            <div className='logo'>
-             <p>LOGO </p>
+           <i className="fas fa-dice" style={{fontSize:50}}></i>
+           <br/>
+           <label>MyHouse</label>
            </div>
         </div>
         <div className='col-sm-6 col-md-4 '>
            <div className='logo'>
-             <p style={{fontWeight:500,fontSize:18}}>zouhour@gmail.com</p>
-             <p style={{fontWeight:500,fontSize:18}}>(+216)5555555</p>
+             <p style={{fontWeight:400,fontSize:18}}>myhouse@gmail.com</p>
+             <p style={{fontWeight:400,fontSize:18}}>(+216)53502987</p>
            </div>
         </div>
         <div className='col-sm-6 col-md-4 '>
@@ -119,7 +121,7 @@ const Home = () => {
         <div className='copie '>
           <div class='container right'>
           <p class="_blank" href="#" target="_blank">
-                    © 2020 - nom de la magazine
+                    © 2020 - MyHouse
           </p>
           </div>
         </div>
