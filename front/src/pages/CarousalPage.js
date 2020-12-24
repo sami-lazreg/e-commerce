@@ -4,7 +4,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView, MDBContainer } from
 "mdbreact"
-import slid1 from '../slider2.jpg'
+import slid1 from '../slider 3.jpg'
 import slid2 from '../slider 6.jpg'
 import slid3 from '../slider 7.png'
 import slid4 from '../slider9.jpg'
