@@ -7,8 +7,8 @@ const SearchNavBar = ({handel}) => {
            
             <div className="container-fluid">
             <form className="d-flex" style={{alignItems:'center'}}>
-           <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" onChange={(e)=>handel(e)}/>
-           <Link to='/filter'><button className="btn btn-outline-success" type="submit"  style={{height:"38px", paddingTop:"5px"}}>Search</button></Link>
+           <input className="form-control me-2" type="search" placeholder="Rechercher" aria-label="Search" onChange={(e)=>handel(e)}/>
+           <Link to='/filter'><button className="btn btn-outline-success" type="submit"  style={{height:"38px", paddingTop:"5px"}}>Rechercher</button></Link>
                </form>
                </div>
                

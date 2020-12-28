@@ -22,7 +22,7 @@ useEffect(()=>{
     dispatch(getAction())
 },[]);
     return (
-        <div>
+        <div >
             <ul className=' product ' >
             {info
             
