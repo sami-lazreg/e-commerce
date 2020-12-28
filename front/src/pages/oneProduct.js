@@ -36,7 +36,7 @@ export default function OneProduct({state}) {
   
     return (
   <li className=' mt-5 mx-4' style={{listStyle:'none'}} >
-   <Card style={{ width: '18rem' }}>
+   <Card style={{ width: '18rem' ,height:"500px"}}>
   <Card.Img variant="top" src={state.url} />
   <Card.Body>
     <Card.Title><p style={{fontSize:14}}>{state.name}</p></Card.Title>
@@ -50,8 +50,8 @@ export default function OneProduct({state}) {
       Panier()
       information()
       
-    }} ><p style={{margin:0 ,fontSize:14}}>add</p></Button>
-    <Link to={`/product/detail/${state._id}`}><Button variant="primary ml-5" ><p style={{margin:0 ,fontSize:14}}>View details</p></Button></Link>
+    }} ><p style={{margin:0 ,padding:0,fontSize:11}}>Ajouter</p></Button>
+    <Link to={`/product/detail/${state._id}`}><Button variant="primary ml-5" ><p style={{margin:0 ,fontSize:11}}>savoir plus</p></Button></Link>
     </div>
   </Card.Body>
       

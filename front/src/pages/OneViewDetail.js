@@ -39,10 +39,10 @@ const OneViewDetail = ({el,goBack}) => {
             <Button onClick={()=>{
           Panier()
           information()
-        }}>Add</Button>
+        }}>Ajouter</Button>
         <Button onClick={()=>{
            goBack()
-        }}>back</Button>
+        }}>Ignorer</Button>
         </div>
         </div>
     )

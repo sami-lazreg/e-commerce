@@ -42,13 +42,13 @@ const deconnection=()=>{
                         <label>MyHouse</label>
                         </li>
                         
-                        <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
+                        <li><Link style={{textDecoration:"none",color:"black"}} to="/">accueil</Link></li>   
                         <li><NavbarProduct/></li>
                         <li><SearchNavBar  handel={ handel}/></li>
                     </ul>
                         
                     <ul style={{display:"flex" ,alignItems:"center"}}>
-                        <li><Link style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/Login">connection</Link></li>
+                        <li><Link style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/Login">connexion</Link></li>
                         <li><Link to='/panier' style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/panier"><i class="fas fa-shopping-cart" style={{fontSize:30}}>0</i></Link></li>
                         
                         
@@ -64,13 +64,13 @@ const deconnection=()=>{
                     <label>MyHouse</label>
                     </li>
                     
-                    <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
+                    <li><Link style={{textDecoration:"none",color:"black"}} to="/">accueil</Link></li>   
                     <li><NavbarProduct/></li>
                     <li><SearchNavBar handel={handel}/></li>
                 </ul>
                     
                 <ul style={{display:"flex" ,alignItems:"center"}}>
-                <li><Link style={{textDecoration:"none",color:"black", marginLeft:"10px"}} onClick={deconnection} to="/">deconnection</Link></li>
+                <li><Link style={{textDecoration:"none",color:"black", marginLeft:"10px"}} onClick={deconnection} to="/">se déconnecter</Link></li>
                     <li><Link to='/panier' style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/panier"><i class="fas fa-shopping-cart" style={{fontSize:30}}>{Panier}</i></Link></li>
                     <li> <Link style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/adminPage"><i class="fas fa-plus-circle" style={{fontSize:30}}></i></Link></li>
                     
@@ -85,13 +85,13 @@ const deconnection=()=>{
                     <label>MyHouse</label>
                     </li>
                     
-                    <li><Link style={{textDecoration:"none",color:"black"}} to="/">Home</Link></li>   
+                    <li><Link style={{textDecoration:"none",color:"black"}} to="/">accueil</Link></li>   
                     <li><NavbarProduct/></li>
                     <li><SearchNavBar  handel={ handel}/></li>
                 </ul>
                     
                 <ul style={{display:"flex" ,alignItems:"center"}}>
-                <li><Link style={{textDecoration:"none",color:"black", marginLeft:"10px"}} onClick={deconnection} to="/">deconnection</Link></li>
+                <li><Link style={{textDecoration:"none",color:"black", marginLeft:"10px"}} onClick={deconnection} to="/">se déconnecter</Link></li>
                     <li><Link to='/panier' style={{textDecoration:"none",color:"black",marginLeft:"10px"}} to="/panier"><i class="fas fa-shopping-cart" style={{fontSize:30}}>{Panier}</i></Link></li>
                     
                     

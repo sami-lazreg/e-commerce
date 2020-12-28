@@ -40,7 +40,7 @@ export default function News({state}){
       Panier()
       information()
       
-    }} className='mb-2'>Ajouter Au panier</button>
+    }} className='mb-2 hBt'>Ajouter Au panier</button>
   </div>
 </div>
 
